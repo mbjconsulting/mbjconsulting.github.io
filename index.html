@@ -1,7 +1,825 @@
-<!DOCTYPE html>
 <html>
+<head>
+    <title>LDI Demo</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
 <body>
-<h1>Hello World 3</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div class="loader-bg js-loader">
+    <div class="cssload-loader"></div>
+</div>
+<a id="overlay">
+    <div id="play">
+        <img src="img/play.png" height="200" width="200">
+        <div id="adjust" class="m-t">Click to play the presentation</div>
+    </div>
+</a>
+<button class="pause-btn"></button>
+<audio id="audio-player">
+    <source src="" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<div class="reveal">
+    <div class="slides">
+        <!-- slide 0 -->
+        <section>
+            <div class="video1-box">
+                <video id="video0" preload="auto">
+                    <source src="./data/Video_Page_1.mp4" type="video/mp4">
+                    This browser does not support the video tag.
+                </video>
+                <p class="fragment fade-in">Jim Smith</p>
+            </div>
+            <div class="logo-box">
+                <img src="img/gps-logo-horz.png" alt=""/>
+            </div>
+            <div class="right-col-sl-0">
+                <img src="img/company.png" class="fragment fade-in" alt="">
+                <img src="img/retirement_picture.png" class="m-t fragment fade-in" alt=""/>
+                <button class="btn m-t fragment fade-in next-btn">click here to get started</button>
+            </div>
+        </section>
+
+        <!-- slide 1 -->
+        <section class="centered-fragments">
+            <div class="fragment fade-in fragment-item-centered">
+                <div class="fragment fade-out">
+                    <img src="img/pic1.png" alt=""/>
+                    <h2><span class="strong-text">84%</span> of Americans have NEVER completed a retirement plan</h2>
+                </div>
+            </div>
+            <div class="fragment fade-in fragment-item-bottom">
+                <img src="img/arrow.png" class="inline" alt=""/>
+                <h2 class="inline">don’t be intimidated</h2>
+            </div>
+            <div class="fragment fade-in fragment-item-top">
+                <div class="fragment fade-out">
+                    <img src="img/pic3.png" alt=""/>
+                </div>
+            </div>
+
+            <div class="fragment fade-in fragment-item-top">
+                <div class="fragment fade-out">
+                    <img src="img/pic4.png" alt=""/>
+                </div>
+            </div>
+            <div class="fragment fade-in fragment-item-top">
+                <img src="img/pic2.png" alt=""/>
+            </div>
+
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b">continue</button>
+        </section>
+        <!-- Slide 3 -->
+        <section>
+            <div class="line-sl-1-3 fragment fade-out" data-fragment-index="3">
+                <div class="fragment fade-in" data-fragment-index="0">
+                    <img src="img/house.png" alt=""/>
+                    <p>a. your house</p>
+                </div>
+                <div class="fragment fade-in" data-fragment-index="1">
+                    <img src="img/edu.png" alt=""/>
+                    <p>b. your kids' education</p>
+                </div>
+                <div class="fragment fade-in" data-fragment-index="2">
+                    <img src="img/money.png" alt=""/>
+                    <p>c. 25 years’ worth of retirement paychecks</p>
+                </div>
+            </div>
+            <div class="line-sl-2-3 fragment fade-in" data-fragment-index="4">
+                <img src="img/money.png" alt=""/>
+                <br/>
+                <h2>25 years’ worth of retirement paychecks!</h2>
+            </div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b" data-fragment-index="5">continue</button>
+        </section>
+        <!-- Slide 4 -->
+        <section>
+            <div class="block-1-sl-4 fragment fade-in">
+                <div class="inline hobbies-wrap">
+                    <ul class="hobbies-list">
+                        <li>fishing</li>
+                        <li>gardening</li>
+                        <li>going to videos</li>
+                        <li>golfing</li>
+                        <li>hiking</li>
+                        <li>horseback riding</li>
+                        <li>listening to music</li>
+                        <li>motorcycling</li>
+                        <li>Lossesting</li>
+                    </ul>
+                </div>
+                <img class="inline m-l" src="img/arrow2.png" alt="" width="66"/>
+            </div>
+            <div class="block-2-sl-4 iefix">
+                <img src="img/retirement_picture.png" alt=""/>
+            </div>
+            <div class="block-3-sl-4">
+                <ul class="list">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+            </div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b">continue</button>
+        </section>
+        <!-- Slide 5 -->
+        <section>
+            <div class="block-2-sl-4 iefix">
+                <img src="img/retirement-pic.png" alt="" width="298"/>
+            </div>
+            <div class="block-3-sl-4">
+                <ul class="list">
+                    <li class="active">hobby: golfing</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+            </div>
+            <div class="block-1-sl-5">
+                <p class="fragment fade-in" data-fragment-index="0"><span>date of birth:</span> October 14, 1960</p>
+                <div class="fragment fade-in" data-fragment-index="7">
+                    <div class="fragment fade-out" data-fragment-index="8">
+                        <p><span class="grey">retirement age:</span> 67</p>
+                        <p><span class="grey">retirement date:</span> November 1, 2027</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-2-sl-5">
+                <div class="fragment fade-in" data-fragment-index="1">
+                    <div class="fragment fade-out" data-fragment-index="2">
+                        <img src="img/moore.png" alt=""/>
+                        <p>Roger Moore <br/> Actor</p>
+                    </div>
+                </div>
+                <div class="fragment fade-in" data-fragment-index="3">
+                    <div class="fragment fade-out" data-fragment-index="4">
+                        <img src="img/dwight.png" alt=""/>
+                        <p>Dwight Eisenhower <br/> 34th President</p>
+                    </div>
+                </div>
+                <div class="fragment fade-in" data-fragment-index="5">
+                    <div class="fragment fade-out" data-fragment-index="6">
+                        <img src="img/wooden.png" alt=""/>
+                        <p>John Wooden <br/> Coach of the Century</p>
+                    </div>
+                </div>
+            </div>
+            <div class="block-3-sl-5 fragment fade-in" data-fragment-index="9">
+                <button class="btn blue js-yes-btn">yes</button>
+                <button class="btn red js-no-btn">no</button>
+            </div>
+        </section>
+        <!-- Slide 6 -->
+        <section>
+            <div class="block-2-sl-4 iefix">
+                <img src="img/retirement-pic-2.png" alt="" width="298"/>
+            </div>
+            <div class="block-3-sl-4">
+                <ul class="list">
+                    <li class="active">hobby: golfing</li>
+                    <li class="active">retire: 11/1/2027</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+            </div>
+            <div class="fragment fade-in block-1-sl-6">
+                <h3>30% of employees have OTHER retirement money</h3>
+            </div>
+            <div class="block-2-sl-6">
+                <div class="fragment fade-in">
+                    <div class="fragment fade-out">
+                        <img src="img/ira.png" alt=""/>
+                    </div>
+                </div>
+                <div class="fragment fade-in">
+                    <div class="fragment fade-out">
+                        <img src="img/401.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="block-3-sl-6 fragment fade-in">
+                <input class="ret-money" type="number" value="20000" min="0"/>
+            </div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b">continue</button>
+        </section>
+        <!-- slide 7 -->
+        <section>
+            <div class="block-2-sl-4 iefix">
+                <img src="img/retirement-pic-3.png" alt="" width="298"/>
+            </div>
+            <div class="block-3-sl-4">
+                <ul class="list">
+                    <li class="active">hobby: golfing</li>
+                    <li class="active">retire: 11/1/2027</li>
+                    <li class="active">other assets: $20,000</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+            </div>
+            <div class="block-1-sl-7">
+                <p class="fragment fade-in"><span class="grey">Current savings: </span><span class="value">5%</span></p>
+                <p class="fragment fade-in m-t"><span class="grey">Recommended: </span><span class="value">3% MORE to 8%</span></p>
+                <p class="fragment fade-in m-t"><span class="grey">Why? </span><span class="value">Because saving 3% more will give you $1,500 more in employer match money EACH YEAR</span></p>
+                <p class="fragment fade-in m-t"><span class="grey">Over Time … </span>if your extra savings and Employer Match earn 7% per year your account would be worth <span class="info">$96,228 MORE</span> <strong>at Retirement</strong></p>
+                <p class="fragment fade-in m-t"><span class="grey">To</span><span class="warning"> STOP LOSING THIS FREE MONEY </span>you will have to reduce your take-home pay by $105 per month</p>
+            </div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b">continue</button>
+        </section>
+        <!-- slide 8 -->
+        <section>
+            <div class="savings-table-wrap">
+                <table class="savings-table">
+                    <thead>
+                        <tr>
+                            <th>additional savings</th>
+                            <th>employer match YOU GAIN each YEAR</th>
+                            <th>account balance YOU GAIN at RETIREMENT</th>
+                            <th>take-home YOU LOSE each MONTH</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="green">1%</td>
+                            <td class="green">$500</td>
+                            <td class="green">$32,076</td>
+                            <td class="warning">-$35.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">2%</td>
+                            <td class="green">$1,000</td>
+                            <td class="green">$64,152</td>
+                            <td class="warning">-$70.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">3%</td>
+                            <td class="green">$1,500</td>
+                            <td class="green">$96,228</td>
+                            <td class="warning">-$105.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">4%</td>
+                            <td class="green">$2,000</td>
+                            <td class="green">$128,304</td>
+                            <td class="warning">-$140.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">5%</td>
+                            <td class="green">$2,500</td>
+                            <td class="green">$160,380</td>
+                            <td class="warning">-$175.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">6%</td>
+                            <td class="green">$3,000</td>
+                            <td class="green">$192,456</td>
+                            <td class="warning">-$210.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">7%</td>
+                            <td class="green">$3,500</td>
+                            <td class="green">$224,532</td>
+                            <td class="warning">-$245.00</td>
+                        </tr>
+                        <tr>
+                            <td class="green">8%</td>
+                            <td class="green">$4,000</td>
+                            <td class="green">$256,608</td>
+                            <td class="warning">-$280.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="block-1-sl-8 fragment fade-in">
+                <img src="img/save_money.png" alt=""/>
+            </div>
+            <div class="fragment fade-in"></div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b">continue</button>
+        </section>
+        <!-- Slide 9 -->
+        <section>
+            <div class="block-2-sl-4 iefix">
+                <img src="img/retirement-pic-4.png" alt="" width="298"/>
+            </div>
+            <div class="block-3-sl-4">
+                <ul class="list">
+                    <li class="active">hobby: golfing</li>
+                    <li class="active">retire: 11/1/2027</li>
+                    <li class="active">other assets: $20,000</li>
+                    <li class="active">save 8% today</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+            </div>
+            <div class="block-1-sl-9 fragment fade-in custom-fragment">
+                <div class="fragment fade-out">
+                    <img src="img/well-done.png" alt=""/>
+                </div>
+            </div>
+            <div class="block-2-sl-9 fragment fade-in">
+                <h3 class="fragment fade-out">70% of employees would take the majority of their next pay raise and use it for Retirement</h3>
+            </div>
+            <div class="block-3-sl-9 fragment fade-in">
+                <div class="savings-table-wrap">
+                    <table class="savings-table">
+                    <thead>
+                    <tr>
+                        <th>additional savings <span class="warning">starting 1/1/2017</span></th>
+                        <th>account balance YOU GAIN at RETIREMENT</th>
+                        <th>take-home pay YOU LOSE each MONTH</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="green">1%</td>
+                        <td class="green">$21,384</td>
+                        <td class="warning">-$35.00</td>
+                    </tr>
+                    <tr>
+                        <td class="green">2%</td>
+                        <td class="green">$42,768</td>
+                        <td class="warning">-$70.00</td>
+                    </tr>
+                    <tr>
+                        <td class="green">3%</td>
+                        <td class="green">$64,152</td>
+                        <td class="warning">-$105.00</td>
+                    </tr>
+                    <tr>
+                        <td class="green">4%</td>
+                        <td class="green">$85,534</td>
+                        <td class="warning">-$140.00</td>
+                    </tr>
+                    <tr>
+                        <td class="green">5%</td>
+                        <td class="green">$106,916</td>
+                        <td class="warning">-$175.00</td>
+                    </tr>
+                    <tr>
+                        <td class="green">6%</td>
+                        <td class="green">$128,304</td>
+                        <td class="warning">-$210.00</td>
+                    </tr>
+                    <tr>
+                        <td class="green">7%</td>
+                        <td class="green">$149,688</td>
+                        <td class="warning">-$245.00</td>
+                    </tr>
+                    <tr>
+                        <td class="green">8%</td>
+                        <td class="green">$171,072</td>
+                        <td class="warning">-$280.00</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+                <img src="img/better-tomorrow.png" class="m-t" alt=""/>
+            </div>
+            <div class="fragment fade-in"></div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b">continue</button>
+        </section>
+        <!-- Slide 10 -->
+        <section>
+            <div class="block-2-sl-4 iefix">
+                <img src="img/retirement-pic-5.png" alt="" width="298"/>
+            </div>
+            <div class="block-3-sl-4">
+                <ul class="list">
+                    <li class="active">hobby: golfing</li>
+                    <li class="active">retire: 11/1/2027</li>
+                    <li class="active">other assets: $20,000</li>
+                    <li class="active">save 8% today</li>
+                    <li class="active">save 5% more in 2017</li>
+                    <li>6</li>
+                </ul>
+            </div>
+            <div class="block-1-sl-10 custom-fragment">
+                <div class="fragment fade-in custom-fragment" data-fragment-index="0">
+                    <img src="img/finish_line.png" alt="" class="fragment fade-out" data-fragment-index="1"/>
+                </div>
+                <div class="fragment fade-out" data-fragment-index="4">
+                    <img src="img/man.png" alt="" class="fragment fade-in custom-fragment" data-fragment-index="2"/>
+                    <img src="img/cross.png" alt="" class="fragment fade-in custom-fragment" data-fragment-index="3"/>
+                </div>
+                <img src="img/follow.png" class="fragment fade-in" alt="" data-fragment-index="5"/>
+            </div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b">continue</button>
+        </section>
+        <!-- Slide 11 -->
+        <section>
+            <div class="block-1-sl-12 block-1-sl-11">
+                <div class="inline circle warning fragment fade-in">
+                    11% <br/> Target <br/> Return
+                </div>
+                <div class="inline circle orange fragment fade-in">
+                    9% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle green fragment fade-in">
+                    7% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle yellow fragment fade-in">
+                    5% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle info fragment fade-in">
+                    3% <br/>Target <br/> Return
+                </div>
+            </div>
+            <div class="block-2-sl-11 m-t">
+                <img src="img/guarantees.png" class="inline fragment fade-in guarantees" alt="" width="109"/>
+                <p class="inline fragment fade-in">
+                    BIGGER <br/> Short-Term<br/> Losses<br/><br/> BIGGER<br/> Long-Term<br/> Account Balance
+                </p>
+                <img src="img/arrows.png" alt="" class="inline fragment fade-in arrow"/>
+                <p class="inline fragment fade-in smaller-losses">
+                    SMALLER <br/> Short-Term<br/> Losses<br/><br/> SMALLER<br/> Long-Term<br/> Account Balance
+                </p>
+            </div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b">continue</button>
+        </section>
+        <!-- Slide 12 -->
+        <section>
+            <div class="block-1-sl-12">
+                <div class="inline circle warning">
+                    11% <br/> Target <br/> Return
+                </div>
+                <div class="inline circle orange">
+                    9% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle green">
+                    7% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle yellow">
+                    5% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle info">
+                    3% <br/>Target <br/> Return
+                </div>
+            </div>
+            <div class="block-2-sl-12 f-r">
+                <p class="inline f-l">BIGGER <br/> Short-Term<br/> Losses</p>
+                <img src="img/arrows.png" alt="" class="inline m-l m-t"/>
+                <p class="inline m-l f-r right-section">SMALLER <br/> Short-Term<br/> Losses</p>
+            </div>
+            <div class="block-3-sl-12">
+                <div class="inline left-col fragment fade-in" data-fragment-index="2">
+                    <div class="fragment grow" data-fragment-index="3">
+                        <div class="fragment shrink" data-fragment-index="4">
+                            <p>
+                                2001 & 2002
+                                Stock Market
+                                <span class="warning">DOWN (33.0%)</span>
+                            </p>
+                            <img class="panic-btn" src="img/panic.png" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline right-col f-r">
+                    <div class="baskets depend-size">
+                        <div class="inline basket-item">
+                            <div class="fragment fade-in" data-fragment-index="0">
+                                <img src="img/basket.png" class="fragment shrink" data-fragment-index="5" alt=""/>
+                            </div>
+                            <p class="fragment fade-in" data-fragment-index="1">$85,000</p>
+                            <div class="fragment fade-in" data-fragment-index="5">
+                                <p class="warning">(31.5%)</p>
+                                <p>$58,200</p>
+                            </div>
+                        </div>
+                        <div class="inline basket-item">
+                            <div class="fragment fade-in" data-fragment-index="0">
+                                <img src="img/basket.png" class="fragment shrink" data-fragment-index="6" alt=""/>
+                            </div>
+                            <p class="fragment fade-in" data-fragment-index="1">$85,000</p>
+                            <div class="fragment fade-in" data-fragment-index="6">
+                                <p class="warning">(25.0%)</p>
+                                <p>$63,700</p>
+                            </div>
+                        </div>
+                        <div class="inline basket-item">
+                            <div class="fragment fade-in" data-fragment-index="0">
+                                <img src="img/basket.png" class="fragment shrink" data-fragment-index="7" alt=""/>
+                            </div>
+                            <p class="fragment fade-in" data-fragment-index="1">$85,000</p>
+                            <div class="fragment fade-in" data-fragment-index="7">
+                                <p class="warning">(20.2%)</p>
+                                <p>$67,800</p>
+                            </div>
+                        </div>
+                        <div class="inline basket-item">
+                            <div class="fragment fade-in" data-fragment-index="0">
+                                <img src="img/basket.png" class="fragment shrink" data-fragment-index="8" alt=""/>
+                            </div>
+                            <p class="fragment fade-in" data-fragment-index="1">$85,000</p>
+                            <div class="fragment fade-in" data-fragment-index="8">
+                                <p class="warning">(16.2%)</p>
+                                <p>$71,200</p>
+                            </div>
+                        </div>
+                        <div class="inline basket-item">
+                            <div class="fragment fade-in" data-fragment-index="0">
+                                <img src="img/basket.png" class="fragment shrink" data-fragment-index="9" alt=""/>
+                            </div>
+                            <p class="fragment fade-in" data-fragment-index="1">$85,000</p>
+                            <div class="fragment fade-in" data-fragment-index="9">
+                                <p class="green">+1.1%</p>
+                                <p>$85,900</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="warning message m-t fragment fade-in" data-fragment-index="10">
+                        Stock Market Losses of 30% or more: 3 times in last 100 years
+                    </div>
+                </div>
+            </div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b" data-fragment-index="11">continue</button>
+        </section>
+        <!-- Slide 13 -->
+        <section>
+            <div class="block-1-sl-12">
+                <div class="inline circle warning">
+                    11% <br/> Target <br/> Return
+                </div>
+                <div class="inline circle orange">
+                    9% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle green">
+                    7% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle yellow">
+                    5% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle info">
+                    3% <br/>Target <br/> Return
+                </div>
+            </div>
+            <div class="block-2-sl-12 m-t f-r">
+                <p class="inline f-l left-sl-13">BIGGER <br/> Short-Term<br/> Account Balance</p>
+                <img src="img/arrows.png" alt="" class="inline"/>
+                <p class="inline f-r right-sl-13">SMALLER <br/> Short-Term<br/> Account Balance</p>
+            </div>
+            <div class="block-3-sl-12">
+                <div class="inline left-col fragment fade-in" data-fragment-index="0">
+                    <p>
+                        YOUR ACCOUNT <br/> <strong>at 11/1/2027</strong>
+                    </p>
+                    <img src="img/guarantees.png" class="fragment fade-in img-sl-13" alt="" data-fragment-index="6"/>
+                </div>
+                <div class="inline right-col f-r">
+                    <div class="baskets desc">
+                        <div class="inline basket-item fragment fade-in" data-fragment-index="1">
+                            <img src="img/basket.png" alt=""/>
+                            <p>$625,371</p>
+                        </div>
+                        <div class="inline basket-item fragment fade-in" data-fragment-index="2">
+                            <img src="img/basket.png" alt=""/>
+                            <p>$528,939</p>
+                        </div>
+                        <div class="inline basket-item fragment fade-in" data-fragment-index="3">
+                            <img src="img/basket.png" alt=""/>
+                            <p>$448,043</p>
+                        </div>
+                        <div class="inline basket-item fragment fade-in" data-fragment-index="4">
+                            <img src="img/basket.png" alt=""/>
+                            <p>$380,256</p>
+                        </div>
+                        <div class="inline basket-item fragment fade-in" data-fragment-index="5">
+                            <img src="img/basket.png" alt=""/>
+                            <p>$323,509</p>
+                        </div>
+                    </div>
+                    <div class="percents">
+                        <div class="percent-item inline warning fragment fade-in" data-fragment-index="7">75%</div>
+                        <div class="percent-item inline warning fragment fade-in" data-fragment-index="8">82%</div>
+                        <div class="percent-item inline warning fragment fade-in" data-fragment-index="9">88%</div>
+                        <div class="percent-item inline warning fragment fade-in" data-fragment-index="10">93%</div>
+                        <div class="percent-item inline warning fragment fade-in" data-fragment-index="11">97%</div>
+                    </div>
+                    <div class="warning message m-t fragment fade-in" data-fragment-index="7">
+                        Percent of Time Target Return Achieved over any 12-year period
+                    </div>
+                </div>
+            </div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b" data-fragment-index="12">continue</button>
+        </section>
+        <!-- Slide 14 -->
+        <section>
+            <div id="js-fund-block" class="fund-block fragment fade-in">
+                <p class="info">My Fund</p>
+                <img src="img/guarantees.png" alt=""/>
+            </div>
+            <div class="block-1-sl-12 circle-items">
+                <div class="inline circle warning" data-line="1">
+                    11% <br/> Target <br/> Return
+                </div>
+                <div class="inline circle orange" data-line="2">
+                    9% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle green" data-line="3">
+                    7% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle yellow" data-line="4">
+                    5% <br/>Target <br/> Return
+                </div>
+                <div class="inline circle info" data-line="5">
+                    3% <br/>Target <br/> Return
+                </div>
+                <div class="block-3-sl-12 m-t floatfix">
+                    <div class="inline left-col">
+                        <p class="no-margin">
+                            YOUR ACCOUNT <br/>
+                            <span class="warning">Short-Term Losses</span><br/>
+                            <strong>2001 & 2002</strong> <br/>
+                            Stock Market
+
+                        </p>
+                        <img src="img/right_arrow.png" class="right-arrow"  alt=""/>
+                    </div>
+                    <div class="inline right-col f-r">
+                        <div class="baskets without-img">
+                            <div class="inline basket-item" data-line="1">
+                                <p>$85,000</p>
+                                <p class="warning">(31.5%)</p>
+                                <p>$58,200</p>
+                            </div>
+                            <div class="inline basket-item" data-line="2">
+                                <p>$85,000</p>
+                                <p class="warning">(25.0%)</p>
+                                <p>$63,700</p>
+                            </div>
+                            <div class="inline basket-item" data-line="3">
+                                <p>$85,000</p>
+                                <p class="warning">(20.2%)</p>
+                                <p>$67,800</p>
+                            </div>
+                            <div class="inline basket-item" data-line="4">
+                                <p>$85,000</p>
+                                <p class="warning">(16.2%)</p>
+                                <p>$71,200</p>
+                            </div>
+                            <div class="inline basket-item" data-line="5">
+                                <p>$85,000</p>
+                                <p class="green">+1.1%</p>
+                                <p>$85,900</p>
+                            </div>
+                        </div>
+                        <div class="warning message m-t">
+                            Stock Market Losses of 30% or more: 3 times in last 100 years
+                        </div>
+                    </div>
+                </div>
+                <div class="block-3-sl-12 m-t floatfix">
+                    <div class="inline left-col">
+                        <p class="no-margin">
+                            YOUR ACCOUNT <br/>
+                            <span class="warning">Long Term <br/> Account Balance</span><br/>
+                            at 11/1/2027
+                        </p>
+                        <img src="img/right_arrow.png" class="right-arrow" alt=""/>
+                    </div>
+                    <div class="inline right-col f-r">
+                        <div class="baskets without-img m-t">
+                            <div class="inline basket-item" data-line="1">
+                                <p>$625,371</p>
+                                <p class="warning">75%</p>
+                            </div>
+                            <div class="inline basket-item" data-line="2">
+                                <p>$528,939</p>
+                                <p class="warning">82%</p>
+                            </div>
+                            <div class="inline basket-item" data-line="3">
+                                <p>$448,043</p>
+                                <p class="warning">88%</p>
+                            </div>
+                            <div class="inline basket-item" data-line="4">
+                                <p>$380,256</p>
+                                <p class="warning">93%</p>
+                            </div>
+                            <div class="inline basket-item" data-line="5">
+                                <p>$323,509</p>
+                                <p class="warning">97%</p>
+                            </div>
+                        </div>
+                        <div class="warning message m-t">
+                            Percent of Time Target Return Achieved over any 12-year period
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b">continue</button>
+        </section>
+        <!-- Slide 15 -->
+        <section>
+            <div class="block-2-sl-4 iefix">
+                <img class="active fragment fade-in" src="img/retirement-pic.png" alt="" width="298" data-fragment-index="1"/>
+                <img class="active fragment fade-in" src="img/retirement-pic-4.png" alt="" width="298" data-fragment-index="2"/>
+                <img class="active fragment fade-in" src="img/retirement-pic-5.png" alt="" width="298" data-fragment-index="3"/>
+                <img class="active fragment fade-in" src="img/retirement-pic-6.png" alt="" width="298" data-fragment-index="4"/>
+            </div>
+            <div class="block-2-sl-9 fragment fade-in" data-fragment-index="0">
+                <h3 class="fragment fade-out" data-fragment-index="5">Only 16% of Americans have completed a retirement plan</h3>
+            </div>
+            <div class="block-3-sl-4 scale-sl-15">
+                <ul class="list">
+                    <li class="active fragment fade-in" data-fragment-index="1">hobby: golfing</li>
+                    <li class="active fragment fade-in" data-fragment-index="1">retire: 11/1/2027</li>
+                    <li class="active fragment fade-in" data-fragment-index="2">other assets: $20,000</li>
+                    <li class="active fragment fade-in" data-fragment-index="3">save 8% today</li>
+                    <li class="active fragment fade-in" data-fragment-index="3">save 5% more in 2017</li>
+                    <li class="active fragment fade-in" data-fragment-index="4">9% target return fund</li>
+                </ul>
+            </div>
+            <div class="doc fragment fade-in" data-fragment-index="5">
+                <p class="date">11/1/2027</p>
+                <p class="sum">75,000 per year</p>
+                <p class="sum-word">Seventy-Five Thousand dollars per year</p>
+            </div>
+            <div class="block-1-sl-15 fragment fade-in" data-fragment-index="6">
+                <h4 class="no-margin">Like Social Security, this paycheck is designed to:</h4>
+                <ul>
+                    <li>last for as long as you live</li>
+                    <li>increase with inflation</li>
+                </ul>
+            </div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b" data-fragment-index="7">continue</button>
+        </section>
+        <!-- Slide 16 -->
+        <section>
+            <div class="block-1-sl-16">
+                <img src="img/retirement-pic-6.png" alt="" width="350"/>
+            </div>
+
+            <div class="block-2-sl-16">
+                <ul class="list">
+                    <li class="active">hobby: golfing</li>
+                    <li class="active">retire: 11/1/2027</li>
+                    <li class="active">other assets: $20,000</li>
+                    <li class="active">save 8% today</li>
+                    <li class="active">save 5% more in 2017</li>
+                    <li class="active">9% target return fund</li>
+                </ul>
+            </div>
+            <div class="block-3-sl-16 fragment fade-in" data-fragment-index="2">
+                <h3>94% of your retirement goal</h3>
+            </div>
+            <div class="doc sl-16 fragment fade-in" data-fragment-index="0">
+                <p class="date">11/1/2027</p>
+                <p class="sum">75,000 per year</p>
+                <p class="sum-word">Seventy-Five Thousand dollars per year</p>
+            </div>
+            <div class="block-4-sl-16 fragment fade-in" data-fragment-index="0">
+                <img src="img/red-arrow.png" class="arrow-left" alt=""/>
+                <p>
+                    your paycheck: <br/>
+                    $75,000
+                </p>
+            </div>
+            <div class="block-5-sl-16 fragment fade-in" data-fragment-index="1">
+                <img src="img/red-arrow.png" class="arrow-right" alt=""/>
+                <p>
+                    you need: <br/>
+                    <strong>$80,000</strong>
+                </p>
+            </div>
+            <button class="btn m-t fragment fade-in next-btn next-btn-r-b" data-fragment-index="3">continue</button>
+        </section>
+        <!-- Slide 17 -->
+        <section>
+            <div class="video1-box">
+                <video id="video1" preload="auto">
+                    <source src="./data/Video_Page_17.mp4" type="video/mp4">
+                    This browser does not support the video tag.
+                </video>
+            </div>
+            <div class="block-3-sl-17">
+                <h3>94% of your retirement goal</h3>
+            </div>
+            <div class="doc sl-17">
+                <p class="date">11/1/2027</p>
+                <p class="sum">75,000 per year</p>
+                <p class="sum-word">Seventy-Five Thousand dollars per year</p>
+            </div>
+            <div class="block-1-sl-17">
+                <p class="inline">
+                    If $75,000 per year is not enough,
+                    simply click on this button to “sharpen”
+                    your personal retirement picture
+                </p>
+                <a class="inline"><img src="img/calc.png" alt=""/></a>
+            </div>
+            <div class="block-2-sl-17">
+                <button class="btn green fragment fade-in">go</button>
+                <button class="btn blue fragment fade-in">save</button>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="app.js"></script>
 </body>
-</html>     
+</html>
